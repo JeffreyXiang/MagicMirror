@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Booting...</title>
+	<link rel="shortcut icon" href="./icon/favicon.ico">
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+
+		function Loading_Icon()
+		{
+			var loop;
+			setTimeout(function(){clearInterval(loop);},55000);
+			document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},500);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},1000);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;&emsp;&emsp;&emsp;";},1500);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;●&emsp;&emsp;";},2000);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;●&emsp;●";},2500);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;●&emsp;●&emsp;●&emsp;●";},3000);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;●&emsp;●&emsp;●";},3500);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;●&emsp;●";},4000);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;●";},4500);
+			setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},5000);
+			loop=setInterval(function()
+			{
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},500);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},1000);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;&emsp;&emsp;&emsp;";},1500);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;●&emsp;&emsp;";},2000);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="●&emsp;●&emsp;●&emsp;●&emsp;●";},2500);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;●&emsp;●&emsp;●&emsp;●";},3000);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;●&emsp;●&emsp;●";},3500);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;●&emsp;●";},4000);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;●";},4500);
+				setTimeout(function(){document.getElementById("loading_icon").innerHTML="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";},5000);
+			},5000);
+		}
+
+		function Current_Process()
+		{
+			document.getElementById("current_process").innerHTML="Initializing wlan0 interface";
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Initializing ppp0 interface";},2000);
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Connecting networks";},4000);
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Creating AP";},30000);
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Starting web service";},40000);
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Loading MagicMirror application";},45000);
+			setTimeout(function(){document.getElementById("current_process").innerHTML="Just a few seconds";},50000);
+			for (var i=0;i<10;i++)	
+				(function(i)
+				{
+					setTimeout(function(){document.getElementById("welcome_screen").style.filter="opacity("+(10*i)+"%)";},55000-100*i);
+				})(i);
+		}
+
+		function Code()
+		{
+			document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> ifconfig wlan0<br>";
+			setTimeout(function(){document.getElementById("code").innerHTML+=
+				"wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;inet 192.168.0.1  netmask 255.255.255.0  broadcast 192.168.0.255<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;inet6 fe80::8984:4086:78e3:54da  prefixlen 64  scopeid 0x20<link><br>"+
+       			"&ensp;&ensp;&ensp;&ensp;ether b8:27:eb:e9:12:d2  txqueuelen 1000  (Ethernet)<br>"+
+       			"&ensp;&ensp;&ensp;&ensp;RX packets 160006  bytes 12751332 (12.1 MiB)<br>"+
+       			"&ensp;&ensp;&ensp;&ensp;RX errors 0  dropped 10  overruns 0  frame 0<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;TX packets 369546  bytes 506377657 (482.9 MiB)<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<br>";},500);
+			setTimeout(function(){document.getElementById("code").innerHTML+="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> sudo create_ap --stop wlan0<br>";},1000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="Trying to kill create_ap instance associated with wlan0...<br>";},1500);
+			setTimeout(function(){document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> ifconfig ppp0<br>";},2000);
+			setTimeout(function(){document.getElementById("code").innerHTML+=
+				"ppp0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;inet 10.129.136.59  netmask 255.255.255.255  destination 10.64.64.64<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;ppp  txqueuelen 3  (Point-to-Point Protocol)<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;RX packets 378992  bytes 502375705 (479.1 MiB)<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;RX errors 0  dropped 0  overruns 0  frame 0<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;TX packets 167147  bytes 13362450 (12.7 MiB)<br>"+
+        			"&ensp;&ensp;&ensp;&ensp;TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<br>";},3000);
+			setTimeout(function(){document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> sudo wvdial Huawei_4G<br>";},4000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> WvDial: Internet dialer version 1.61<br>";},4200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Initializing modem.<br>";},4400);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Sending: ATZ<br>";},4600);
+			setTimeout(function(){document.getElementById("code").innerHTML+="ATZ<br>OK<br>";},6000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Sending: ATQ0 V1 E1 S0=0<br>";},6200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="ATQ0 V1 E1 S0=0<br>OK<br>";},7000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Sending: at+cgdcont=1,\"ip\",\"cmnet\"<br>";},7200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="at+cgdcont=1,\"ip\",\"cmnet\"<br>OK<br>";},8000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Modem initialized.<br>";},8200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Sending: ATDT*99***1#<br>";},8400);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Waiting for carrier.<br>";},8600);
+			setTimeout(function(){document.getElementById("code").innerHTML+="ATDT*99***1#<br>CONNECT 150000000<br>";},9600);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Carrier detected.  Waiting for prompt.<br>";},9800);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Don't know what to do!  Starting pppd and hoping for the best.<br>--> Starting pppd at Sat Mar  2 11:53:01 2019<br>--> Pid of pppd: 10529<br>";},25000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="--> Using interface ppp0<br>--> pppd: �)Q[01]�[1a]Q[01]<br>--> pppd: �)Q[01]�[1a]Q[01]<br>";},26000);
+			setTimeout(function(){document.getElementById("code").innerHTML+=
+				"--> local  IP address 10.129.136.59<br>"+
+				"--> pppd: �)Q[01]�[1a]Q[01]<br>"+
+				"--> remote IP address 10.64.64.64<br>"+
+				"--> pppd: �)Q[01]�[1a]Q[01]<br>"+
+				"--> primary   DNS address 211.138.180.2<br>"+
+				"--> pppd: �)Q[01]�[1a]Q[01]<br>"+
+				"--> secondary DNS address 211.138.180.3<br>";},27000);
+			setTimeout(function(){document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> sudo create_ap -g 192.168.0.1 wlan0 ppp0 Pi 20190223<br>";},30000);
+			setTimeout(function(){document.getElementById("code").innerHTML+=
+				"WARN: brmfmac driver doesn't work properly with virtual interfaces and it can cause<br>"+
+				"&ensp;&ensp;&ensp;&ensp;kernel panic. For this reason we disallow virtual interfaces for your adapter.<br>"+
+      				"&ensp;&ensp;&ensp;&ensp;For more info: https://github.com/oblique/create_ap/issues/203<br>"+
+				"WARN: Your adapter does not fully support AP virtual interface, enabling --no-virt<br>";},30200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="Config dir: /tmp/create_ap.wlan0.conf.OfUFlMeS<br>PID: 10924<br>";},30400);
+			setTimeout(function(){document.getElementById("code").innerHTML+="Sharing Internet using method: nat<br>";},32000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="hostapd command-line interface: hostapd_cli -p /tmp/create_ap.wlan0.conf.OfUFlMeS/hostapd_ctrl<br>";},33000);
+			setTimeout(function(){document.getElementById("code").innerHTML+=
+				"Configuration file: /tmp/create_ap.wlan0.conf.OfUFlMeS/hostapd.conf<br>"+
+				"Failed to create interface mon.wlan0: -95 (Operation not supported)<br>"+
+				"wlan0: Could not connect to kernel driver<br>"+
+				"Using interface wlan0 with hwaddr b8:27:eb:e9:12:d2 and ssid \"Pi\"<br>";},33200);
+			setTimeout(function(){document.getElementById("code").innerHTML+="wlan0: interface state UNINITIALIZED->ENABLED<br>wlan0: AP-ENABLED<br>";},35000);
+			setTimeout(function(){document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> sudo python /home/pi/Documents/MagicMirror/MagicMirror.py<br>";},40000);
+			setTimeout(function(){document.getElementById("code").innerHTML+=" * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)<br>";},43000);
+			setTimeout(function(){document.getElementById("code").innerHTML="<font style='color: #3FFF3F'>pi@raspberrypi:</font><font style='color: #3F3FFF'>~ $</font> chromium-browser --kiosk \"/home/pi/Documents/MagicMirror/MagicMirror.html\" --incognito<br>";},45000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="Fontconfig warning: \"/etc/fonts/fonts.conf\", line 160: blank doesn't take any effect anymore. please remove it from your fonts.conf<br>";},45400);
+			setTimeout(function(){document.getElementById("code").innerHTML+="[18489:18489:0302/130016.045058:ERROR:gpu_process_transport_factory.cc(1029)] Lost UI shared context.<br>";},46000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="[18489:18522:0302/130016.276231:ERROR:in_progress_cache_impl.cc(93)] Could not read download entries from file because there was a read failure.<br>";},46500);
+			setTimeout(function(){document.getElementById("code").innerHTML+="[18489:18585:0302/130016.282049:ERROR:object_proxy.cc(626)] Failed to call method: org.freedesktop.Notifications.GetCapabilities: object_path= /org/freedesktop/Notifications: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files<br>";},47000);
+			setTimeout(function(){document.getElementById("code").innerHTML+="libGL error: MESA-LOADER: failed to retrieve device information<br>MESA-LOADER: failed to retrieve device information<br>MESA-LOADER: failed to retrieve device information<br>";},47500);
+			setTimeout(function(){document.getElementById("code").innerHTML+="ATTENTION: default value of option force_s3tc_enable overridden by environment.<br>";},48000);
+			setTimeout(function(){document.getElementById("code").innerHTML="";},50000);
+		}
+
+		function Welcome_Screen()
+		{
+			for (var i=0;i<10;i++)	
+				(function(i)
+				{
+					setTimeout(function(){document.getElementById("welcome_screen").style.filter="opacity("+(10*i)+"%)";},55000+100*i);
+				})(i);
+			setTimeout(function(){document.getElementById("welcome_screen").style.filter="";},55000+100*i);
+			setTimeout(function(){document.getElementById("welcome_screen").innerHTML=
+				"<div style='height: 100%; width: 0; vertical-align: middle; display:inline-block'></div>"+
+				"<div style='font-size:100px; width: 100%; text-align: center; vertical-align: middle; display:inline-block'>"+
+				"Welcome!"+
+				"</div>";
+			},55000);
+		}
+
+		function Application()
+		{
+			setTimeout(function(){window.location.href="/home/pi/Documents/MagicMirror/MagicMirror.html"},60000);
+		}
+
+		$(function(){Loading_Icon();Current_Process();Code();Welcome_Screen();Application();});
+
+	</script>
+</head>
+<body style="font-family: Roboto,Noto Sans CJK Thin; font-weight: 100; color: #FFFFFF; background: #000000";>
+	<div id="welcome_screen" style="position:absolute; left:0px; top:0px; width: 100%; height: 100%;">
+		<div style="margin-top: 30%; font-size:100px; text-align: center;">
+			MagicMirror
+		</div>
+		<div style="margin-top: 50px; font-size:50px; text-align: center;">
+			By Jeffrey
+		</div>
+		<div id="current_process" style="margin-top: 200px; font-size:30px; text-align: center;">
+		</div>
+		<div id="loading_icon" style="margin-top: 50px; height: 25px; font-size:20px; text-align: center;">
+		</div>
+		<div id="code" style="margin-top: 50px; margin-left: 25%; font-size:20px;">
+		</div>
+	</div>
+</body>
+</html>

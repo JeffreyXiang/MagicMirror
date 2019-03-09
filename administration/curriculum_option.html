@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Schudule Option</title>
+	<script type="text/javascript" src="../js_Web/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			document.getElementById("read_json_request").onclick=function()
+			{
+				$.ajax({
+					url:"/json/curriculum/read",
+					dataType:"json",
+					cache:false,
+					success:function(data)
+					{
+						document.getElementById("read_json[0][0]").innerHTML=data[0][0].curriculum;
+						document.getElementById("read_json[0][1]").innerHTML=data[0][1].curriculum;
+						document.getElementById("read_json[0][2]").innerHTML=data[0][2].curriculum;
+						document.getElementById("read_json[0][3]").innerHTML=data[0][3].curriculum;
+						document.getElementById("read_json[0][4]").innerHTML=data[0][4].curriculum;
+						document.getElementById("read_json[1][0]").innerHTML=data[1][0].curriculum;
+						document.getElementById("read_json[1][1]").innerHTML=data[1][1].curriculum;
+						document.getElementById("read_json[1][2]").innerHTML=data[1][2].curriculum;
+						document.getElementById("read_json[1][3]").innerHTML=data[1][3].curriculum;
+						document.getElementById("read_json[1][4]").innerHTML=data[1][4].curriculum;
+						document.getElementById("read_json[2][0]").innerHTML=data[2][0].curriculum;
+						document.getElementById("read_json[2][1]").innerHTML=data[2][1].curriculum;
+						document.getElementById("read_json[2][2]").innerHTML=data[2][2].curriculum;
+						document.getElementById("read_json[2][3]").innerHTML=data[2][3].curriculum;
+						document.getElementById("read_json[2][4]").innerHTML=data[2][4].curriculum;
+						document.getElementById("read_json[3][0]").innerHTML=data[3][0].curriculum;
+						document.getElementById("read_json[3][1]").innerHTML=data[3][1].curriculum;
+						document.getElementById("read_json[3][2]").innerHTML=data[3][2].curriculum;
+						document.getElementById("read_json[3][3]").innerHTML=data[3][3].curriculum;
+						document.getElementById("read_json[3][4]").innerHTML=data[3][4].curriculum;
+						document.getElementById("read_json[4][0]").innerHTML=data[4][0].curriculum;
+						document.getElementById("read_json[4][1]").innerHTML=data[4][1].curriculum;
+						document.getElementById("read_json[4][2]").innerHTML=data[4][2].curriculum;
+						document.getElementById("read_json[4][3]").innerHTML=data[4][3].curriculum;
+						document.getElementById("read_json[4][4]").innerHTML=data[4][4].curriculum;
+					},
+					error:function()
+					{
+						alert("Error! Please check the network.");
+					}
+					});
+			};
+			document.getElementById("read_jsonp_request").onclick=function()
+			{
+				$.ajax({
+					url:"/jsonp/curriculum/read",
+					dataType:"jsonp",
+					success:function(data)
+					{
+						document.getElementById("read_jsonp[0][0]").innerHTML=data[0][0].curriculum;
+						document.getElementById("read_jsonp[0][1]").innerHTML=data[0][1].curriculum;
+						document.getElementById("read_jsonp[0][2]").innerHTML=data[0][2].curriculum;
+						document.getElementById("read_jsonp[0][3]").innerHTML=data[0][3].curriculum;
+						document.getElementById("read_jsonp[0][4]").innerHTML=data[0][4].curriculum;
+						document.getElementById("read_jsonp[1][0]").innerHTML=data[1][0].curriculum;
+						document.getElementById("read_jsonp[1][1]").innerHTML=data[1][1].curriculum;
+						document.getElementById("read_jsonp[1][2]").innerHTML=data[1][2].curriculum;
+						document.getElementById("read_jsonp[1][3]").innerHTML=data[1][3].curriculum;
+						document.getElementById("read_jsonp[1][4]").innerHTML=data[1][4].curriculum;
+						document.getElementById("read_jsonp[2][0]").innerHTML=data[2][0].curriculum;
+						document.getElementById("read_jsonp[2][1]").innerHTML=data[2][1].curriculum;
+						document.getElementById("read_jsonp[2][2]").innerHTML=data[2][2].curriculum;
+						document.getElementById("read_jsonp[2][3]").innerHTML=data[2][3].curriculum;
+						document.getElementById("read_jsonp[2][4]").innerHTML=data[2][4].curriculum;
+						document.getElementById("read_jsonp[3][0]").innerHTML=data[3][0].curriculum;
+						document.getElementById("read_jsonp[3][1]").innerHTML=data[3][1].curriculum;
+						document.getElementById("read_jsonp[3][2]").innerHTML=data[3][2].curriculum;
+						document.getElementById("read_jsonp[3][3]").innerHTML=data[3][3].curriculum;
+						document.getElementById("read_jsonp[3][4]").innerHTML=data[3][4].curriculum;
+						document.getElementById("read_jsonp[4][0]").innerHTML=data[4][0].curriculum;
+						document.getElementById("read_jsonp[4][1]").innerHTML=data[4][1].curriculum;
+						document.getElementById("read_jsonp[4][2]").innerHTML=data[4][2].curriculum;
+						document.getElementById("read_jsonp[4][3]").innerHTML=data[4][3].curriculum;
+						document.getElementById("read_jsonp[4][4]").innerHTML=data[4][4].curriculum;
+					},
+					error:function()
+					{
+						alert("Error! Please check the network.");
+					}
+					});
+			};
+		});
+	</script>
+</head>
+<body style="font-family: 等线; font-weight: 100">
+	<font style="font-size: 60px">Curriculum Option</font>
+	<hr><br>
+	<hr align=left width=550px>
+	<font style="font-size: 30px">Read</font>
+	<hr align=left width=550px>
+	<font style="font-size: 20px">Json</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		<button id="read_json_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<table style="border-collapse: collapse; text-align: center; font-family: 等线; font-weight: 100; font-size: 16px;">
+			<tr height=20px>
+				<td id="read_json[0][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[1][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[2][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[3][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[4][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_json[0][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[1][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[2][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[3][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[4][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_json[0][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[1][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[2][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[3][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[4][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_json[0][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[1][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[2][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[3][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[4][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_json[0][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[1][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[2][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[3][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_json[4][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+		</table>
+	</div>
+	<font style="font-size: 20px">Jsonp</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		<button id="read_jsonp_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<table style="border-collapse: collapse; text-align: center; font-family: 等线; font-weight: 100; font-size: 16px;">
+			<tr height=20px>
+				<td id="read_jsonp[0][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[1][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[2][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[3][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[4][0]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_jsonp[0][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[1][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[2][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[3][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[4][1]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_jsonp[0][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[1][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[2][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[3][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[4][2]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_jsonp[0][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[1][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[2][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[3][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[4][3]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+			<tr height=20px>
+				<td id="read_jsonp[0][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[1][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[2][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[3][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+				<td id="read_jsonp[4][4]" width=100px style="border: 1px solid #7F7F7F;"></td>
+			</tr>
+		</table>
+	</div>
+	<hr align=left width=550px>
+	<font style="font-size: 30px">Write</font>
+	<hr align=left width=550px>
+	<font style="font-size: 20px">Json</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 200px">
+		<table style="border-collapse: collapse; text-align: center; font-family: 等线; font-weight: 100; font-size: 16px;">
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+		</table>
+		<button id="write_json_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="write_json_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+	<font style="font-size: 20px">Jsonp</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 200px">
+		<table style="border-collapse: collapse; text-align: center; font-family: 等线; font-weight: 100; font-size: 16px;">
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][0]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][1]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][2]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][3]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+			<tr height=20px>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[0][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[1][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[2][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[3][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+				<td width=100px style="border: 1px solid #7F7F7F;"><input id="write_json[4][4]" style="width: 96px; font-family: 等线; font-weight: 100"></td>
+			</tr>
+		</table>
+		<button id="write_jsonp_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="write_jsonp_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+</body>
+</html>

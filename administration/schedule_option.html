@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Schudule Option</title>
+	<script type="text/javascript" src="../js_Web/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			document.getElementById("read_json_request").onclick=function()
+			{
+				$.ajax({
+					url:"/json/schedule/read",
+					dataType:"json",
+					cache:false,
+					success:function(data)
+					{
+						document.getElementById("read_json_return").value=JSON.stringify(data);
+					},
+					error:function()
+					{
+						document.getElementById("read_json_return").value="Error! Please check the network.";
+					}
+					});
+			};
+			document.getElementById("read_jsonp_request").onclick=function()
+			{
+				$.ajax({
+					url:"/jsonp/schedule/read",
+					dataType:"jsonp",
+					success:function(data)
+					{
+						document.getElementById("read_jsonp_return").value=JSON.stringify(data);
+					},
+					error:function()
+					{
+						document.getElementById("read_json_return").value="Error! Please check the network.";
+					}
+					});
+			};
+			document.getElementById("add_json_request").onclick=function()
+			{
+				$.ajax({
+					url:"/json/schedule/add",
+					data:
+					{
+						year:document.getElementById("add_json_year").value,
+						month:document.getElementById("add_json_month").value,
+						day:document.getElementById("add_json_day").value,
+						text:document.getElementById("add_json_text").value
+					},
+					dataType:"json",
+					cache:false,
+					success:function(data)
+					{
+						document.getElementById("add_json_return").value=data.status;
+					},
+					error:function()
+					{
+						document.getElementById("add_json_return").value="Error! Please check the network.";
+					}
+					});
+			};
+			document.getElementById("add_jsonp_request").onclick=function()
+			{
+				$.ajax({
+					url:"/jsonp/schedule/add",
+					data:
+					{
+						year:document.getElementById("add_jsonp_year").value,
+						month:document.getElementById("add_jsonp_month").value,
+						day:document.getElementById("add_jsonp_day").value,
+						text:document.getElementById("add_jsonp_text").value
+					},
+					dataType:"jsonp",
+					success:function(data)
+					{
+						document.getElementById("add_jsonp_return").value=data.status;
+					},
+					error:function()
+					{
+						document.getElementById("add_jsonp_return").value="Error! Please check the network.";
+					}
+					});
+			};
+			document.getElementById("delete_json_request").onclick=function()
+			{
+				$.ajax({
+					url:"/json/schedule/delete",
+					data:{number:document.getElementById("delete_json_number").value},
+					dataType:"json",
+					cache:false,
+					success:function(data)
+					{
+						document.getElementById("delete_json_return").value=data.status;
+					},
+					error:function()
+					{
+						document.getElementById("delete_json_return").value="Error! Please check the network.";
+					}
+					});
+			};
+			document.getElementById("delete_jsonp_request").onclick=function()
+			{
+				$.ajax({
+					url:"/jsonp/schedule/delete",
+					data:{number:document.getElementById("delete_jsonp_number").value},
+					dataType:"jsonp",
+					success:function(data)
+					{
+						document.getElementById("delete_jsonp_return").value=data.status;
+					},
+					error:function()
+					{
+						document.getElementById("delete_jsonp_return").value="Error! Please check the network.";
+					}
+					});
+			};
+		});
+	</script>
+</head>
+<body style="font-family: 等线; font-weight: 100">
+	<font style="font-size: 60px">Schedule Option</font>
+	<hr><br>
+	<hr align=left width=550px>
+	<font style="font-size: 30px">Read</font>
+	<hr align=left width=550px>
+	<font style="font-size: 20px">Json</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		<button id="read_json_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<textarea id="read_json_return" style="width: 500px; height:100px; font-family: 等线; font-weight: 100"></textarea>
+	</div>
+	<font style="font-size: 20px">Jsonp</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		<button id="read_jsonp_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<textarea id="read_jsonp_return" style="width: 500px; height:100px; font-family: 等线; font-weight: 100"></textarea>
+	</div>
+	<hr align=left width=550px>
+	<font style="font-size: 30px">Add</font>
+	<hr align=left width=550px>
+	<font style="font-size: 20px">Json</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		year:
+		<input id="add_json_year" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		month:
+		<input id="add_json_month" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		day:
+		<input id="add_json_day" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		<br><table><tr><td>text:</td>
+		<td><textarea id="add_json_text" style="width: 450px; height: 45px; font-family: 等线; font-weight: 100"></textarea></td></tr></table>
+		<button id="add_json_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="add_json_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+	<font style="font-size: 20px">Jsonp</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 160px">
+		year:
+		<input id="add_jsonp_year" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		month:
+		<input id="add_jsonp_month" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		day:
+		<input id="add_jsonp_day" type="text" style="width: 100px; font-family: 等线; font-weight: 100">
+		<br><table><tr><td>text:</td>
+		<td><textarea id="add_jsonp_text" style="width: 450px; height: 45px; font-family: 等线; font-weight: 100"></textarea></td></tr></table>
+		<button id="add_jsonp_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="add_jsonp_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+	<hr align=left width=550px>
+	<font style="font-size: 30px">Delete</font>
+	<hr align=left width=550px>
+	<font style="font-size: 20px">Json</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 100px">
+		number:
+		<input id="delete_json_number" type="text" style="width: 100px; font-family: 等线; font-weight: 100"><br>
+		<button id="delete_json_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="delete_json_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+	<font style="font-size: 20px">Jsonp</font>
+	<hr align=left width=510px>
+	<div style="font-size: 20px; height: 100px">
+		number:
+		<input id="delete_jsonp_number" type="text" style="width: 100px; font-family: 等线; font-weight: 100"><br>
+		<button id="delete_jsonp_request" style="font-family: 等线; font-weight: 100; font-size: 20px; vertical-align: middle">Send Request</button>
+		<br>Returned value:<br>
+		<input id="delete_jsonp_return" style="width: 500px; font-family: 等线; font-weight: 100">
+	</div>
+</body>
+</html>

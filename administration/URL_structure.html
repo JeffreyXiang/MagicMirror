@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>URL Structure</title>
+</head>
+<body>
+	<font style="font-family: 等线; font-size: 60px; font-weight: 100">URL Structure</font>
+	<hr>
+	<font style="font-family: 等线; font-size: 20px; font-weight: 100">
+		.<br>
+		├─/MagicMirror&emsp;<a href="/MagicMirror">Test</a><br>
+		├─/js<br>
+		│&emsp;├─/jquery-1.11.3.min.js&emsp;<a href="/js/jquery-1.11.3.min.js">Test</a><br>
+		│&emsp;├─/calendar.js&emsp;<a href="/js/calendar.js">Test</a><br>
+		│&emsp;├─/clock.js&emsp;<a href="/js/clock.js">Test</a><br>
+		│&emsp;├─/control.js&emsp;<a href="/js/control.js">Test</a><br>
+		│&emsp;├─/message.js&emsp;<a href="/js/message.js">Test</a><br>
+		│&emsp;├─/music.js&emsp;<a href="/js/music.js">Test</a><br>
+		│&emsp;├─/schedule.js&emsp;<a href="/js/schedule.js">Test</a><br>
+		│&emsp;├─/time.js&emsp;<a href="/js/time.js">Test</a><br>
+		│&emsp;├─/weather.js&emsp;<a href="/js/weather.js">Test</a><br>
+		│&emsp;└─/weather_detail.js&emsp;<a href="/js/weather_detail.js">Test</a><br>
+		├─/js_Web<br>
+		│&emsp;├─/jquery-1.11.3.min.js&emsp;<a href="/js_Web/jquery-1.11.3.min.js">Test</a><br>
+		│&emsp;├─/calendar.js&emsp;<a href="/js_Web/calendar.js">Test</a><br>
+		│&emsp;├─/clock.js&emsp;<a href="/js_Web/clock.js">Test</a><br>
+		│&emsp;├─/control.js&emsp;<a href="/js_Web/control.js">Test</a><br>
+		│&emsp;├─/message.js&emsp;<a href="/js_Web/message.js">Test</a><br>
+		│&emsp;├─/music.js&emsp;<a href="/js_Web/music.js">Test</a><br>
+		│&emsp;├─/schedule.js&emsp;<a href="/js_Web/schedule.js">Test</a><br>
+		│&emsp;├─/time.js&emsp;<a href="/js_Web/time.js">Test</a><br>
+		│&emsp;├─/weather.js&emsp;<a href="/js_Web/weather.js">Test</a><br>
+		│&emsp;└─/weather_detail.js&emsp;<a href="/js_Web/weather_detail.js">Test</a><br>
+		├─/json<br>
+		│&emsp;├─/cmd&emsp;<a href="/json/cmd">Test</a><br>
+		│&emsp;├─/alarm_clock<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/json/alarm_clock/read">Test</a><br>
+		│&emsp;│&emsp;├─/switch&emsp;<a href="/json/alarm_clock/switch?number=0">Test</a><br>
+		│&emsp;│&emsp;├─/add&emsp;<a href="/json/alarm_clock/add?time=00:00&frequency=临时">Test</a><br>
+		│&emsp;│&emsp;└─/delete&emsp;<a href="/json/alarm_clock/delete?number=0">Test</a><br>
+		│&emsp;├─/schedule<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/json/schedule/read">Test</a><br>
+		│&emsp;│&emsp;├─/add&emsp;<a href="/json/schedule/add?year=1970&month=1&day=1&text=test">Test</a><br>
+		│&emsp;│&emsp;└─/delete&emsp;<a href="/json/schedule/delete?number=0">Test</a><br>
+		│&emsp;├─/curriculum<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/json/curriculum/read">Test</a><br>
+		│&emsp;│&emsp;└─/write&emsp;<a href="/json/curriculum/write">Test</a><br>
+		│&emsp;└─/music_filename<br>
+		│&emsp;&emsp;&emsp;└─/read&emsp;<a href="/json/music_filename/read">Test</a><br>
+		├─/jsonp<br>
+		│&emsp;├─/cmd&emsp;<a href="/jsonp/cmd?callback=test">Test</a><br>
+		│&emsp;├─/alarm_clock<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/jsonp/alarm_clock/read?callback=test">Test</a><br>
+		│&emsp;│&emsp;├─/switch&emsp;<a href="/jsonp/alarm_clock/switch?callback=test&number=0">Test</a><br>
+		│&emsp;│&emsp;├─/add&emsp;<a href="/jsonp/alarm_clock/add?callback=test&time=00:00&frequency=临时"">Test</a><br>
+		│&emsp;│&emsp;└─/delete&emsp;<a href="/jsonp/alarm_clock/delete?callback=test&number=0">Test</a><br>
+		│&emsp;├─/schedule<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/jsonp/schedule/read?callback=test">Test</a><br>
+		│&emsp;│&emsp;├─/add&emsp;<a href="/jsonp/schedule/add?callback=test&year=1970&month=1&day=1&text=test">Test</a><br>
+		│&emsp;│&emsp;└─/delete&emsp;<a href="/jsonp/schedule/delete?callback=test&number=0">Test</a><br>
+		│&emsp;├─/curriculum<br>
+		│&emsp;│&emsp;├─/read&emsp;<a href="/jsonp/curriculum/read?callback=test">Test</a><br>
+		│&emsp;│&emsp;└─/write&emsp;<a href="/jsonp/curriculum/write?callback=test">Test</a><br>
+		│&emsp;└─/music_filename<br>
+		│&emsp;&emsp;&emsp;└─/read&emsp;<a href="/jsonp/music_filename/read?callback=test">Test</a><br>
+		├─/icon<br>
+		│&emsp;├─/favicon.ico&emsp;<a href="/icon/favicon.ico">Test</a><br>
+		│&emsp;├─/ADD.png&emsp;<a href="/icon/ADD.png">Test</a><br>
+		│&emsp;├─/AQI.png&emsp;<a href="/icon/AQI.png">Test</a><br>
+		│&emsp;├─/BEHIND.png&emsp;<a href="/icon/BEHIND.png">Test</a><br>
+		│&emsp;├─/CLEAR_DAY.png&emsp;<a href="/icon/CLEAR_DAY.png">Test</a><br>
+		│&emsp;├─/CLEAR_NIGHT.png&emsp;<a href="/icon/CLEAR_NIGHT.png">Test</a><br>
+		│&emsp;├─/CLOUDY.png&emsp;<a href="/icon/CLOUDY.png">Test</a><br>
+		│&emsp;├─/DELETE.png&emsp;<a href="/icon/DELETE.png">Test</a><br>
+		│&emsp;├─/DOWN.png&emsp;<a href="/icon/DOWN.png">Test</a><br>
+		│&emsp;├─/FRONT.png&emsp;<a href="/icon/FRONT.png">Test</a><br>
+		│&emsp;├─/HAZE.png&emsp;<a href="/icon/HAZE.png">Test</a><br>
+		│&emsp;├─/HUMIDITY.png&emsp;<a href="/icon/HUMIDITY.png">Test</a><br>
+		│&emsp;├─/LEFT.png&emsp;<a href="/icon/LEFT.png">Test</a><br>
+		│&emsp;├─/LIST_LOOP.png&emsp;<a href="/icon/LIST_LOOP.png">Test</a><br>
+		│&emsp;├─/OFF.png&emsp;<a href="/icon/OFF.png">Test</a><br>
+		│&emsp;├─/ON.png&emsp;<a href="/icon/ON.png">Test</a><br>
+		│&emsp;├─/PARTLY_CLOUDY_DAY.png&emsp;<a href="/icon/PARTLY_CLOUDY_DAY.png">Test</a><br>
+		│&emsp;├─/PARTLY_CLOUDY_NIGHT.png&emsp;<a href="/icon/PARTLY_CLOUDY_NIGHT.png">Test</a><br>
+		│&emsp;├─/PAUSE.png&emsp;<a href="/icon/PAUSE.png">Test</a><br>
+		│&emsp;├─/PLAY.png&emsp;<a href="/icon/PLAY.png">Test</a><br>
+		│&emsp;├─/PRESSURE.png&emsp;<a href="/icon/PRESSURE.png">Test</a><br>
+		│&emsp;├─/RAIN.png&emsp;<a href="/icon/RAIN.png">Test</a><br>
+		│&emsp;├─/RANDOM_LOOP.png&emsp;<a href="/icon/RANDOM_LOOP.png">Test</a><br>
+		│&emsp;├─/RESET.png&emsp;<a href="/icon/RESET.png">Test</a><br>
+		│&emsp;├─/RIGHT.png&emsp;<a href="/icon/RIGHT.png">Test</a><br>
+		│&emsp;├─/SINGLE_LOOP.png&emsp;<a href="/icon/SINGLE_LOOP.png">Test</a><br>
+		│&emsp;├─/SNOW.png&emsp;<a href="/icon/SNOW.png">Test</a><br>
+		│&emsp;├─/START.png&emsp;<a href="/icon/START.png">Test</a><br>
+		│&emsp;├─/STOP.png&emsp;<a href="/icon/STOP.png">Test</a><br>
+		│&emsp;├─/UP.png&emsp;<a href="/icon/UP.png">Test</a><br>
+		│&emsp;├─/VOLUME.png&emsp;<a href="/icon/VOLUME.png">Test</a><br>
+		│&emsp;├─/WIND.png&emsp;<a href="/icon/WIND.png">Test</a><br>
+		│&emsp;├─/简约天气图标矢量.eps&emsp;<a href="/icon/简约天气图标矢量.eps">Test</a><br>
+		│&emsp;└─/音乐控制.eps&emsp;<a href="/icon/音乐控制.eps">Test</a><br>
+		├─/music<br>
+		│&emsp;├─/Christophe Lebled - Alpha.mp3&emsp;<a href="/music/Christophe Lebled - Alpha.mp3">Test</a><br>
+		│&emsp;├─/Daydream (白日梦) - 眼泪.mp3&emsp;<a href="/music/Daydream (白日梦) - 眼泪.mp3">Test</a><br>
+		│&emsp;├─/DJ OKAWARI - Luv Letter.mp3&emsp;<a href="/music/DJ OKAWARI - Luv Letter.mp3">Test</a><br>
+		│&emsp;├─/Kyle Xian - 前前前世 X 梦灯笼 X 火花(スパークル) X 没什么大不了(なんでもない や) X 黄昏之时(かたわれ時) X 三叶的主题(三葉のテーマ).mp3&emsp;<a href="/music/Kyle Xian - 前前前世 X 梦灯笼 X 火花(スパークル) X 没什么大不了(なんでもないや) X 黄昏之时(かたわれ時) X 三叶的主题(三葉のテーマ).mp3">Test</a><br>
+		│&emsp;├─/吕知潭 - 天空之城.mp3&emsp;<a href="/music/吕知潭 - 天空之城.mp3">Test</a><br>
+		│&emsp;├─/游学志 - 风动草.mp3&emsp;<a href="/music/游学志 - 风动草.mp3">Test</a><br>
+		│&emsp;├─/魏琮霏 - 岸.mp3&emsp;<a href="/music/魏琮霏 - 岸.mp3">Test</a><br>
+		│&emsp;├─/魏琮霏 - 积木森林.mp3&emsp;<a href="/music/魏琮霏 - 积木森林.mp3">Test</a><br>
+		│&emsp;└─/魏琮霏 - 青石巷.mp3&emsp;<a href="/music/魏琮霏 - 青石巷.mp3">Test</a><br>
+		├─/ringtone<br>
+		│&emsp;└─/Aurora.mp3&emsp;<a href="/ringtone/Aurora.mp3">Test</a><br>
+		├─/fonts<br>
+		│&emsp;├─/NotoSansCJK-Thin.otf&emsp;<a href="/fonts/NotoSansCJK-Thin.otf">Test</a><br>
+		│&emsp;└─/Roboto-Thin.ttf&emsp;<a href="/fonts/Roboto-Thin.ttf">Test</a><br>
+		└─/administration<br>
+		&emsp;&emsp;├─/test&emsp;<a href="/administration/test">Test</a><br>
+		&emsp;&emsp;├─/debug&emsp;<a href="/administration/debug">Test</a><br>
+		&emsp;&emsp;├─/schedule_option&emsp;<a href="/administration/schedule_option">Test</a><br>
+		&emsp;&emsp;├─/curriculum_option&emsp;<a href="/administration/curriculum_option">Test</a><br>
+		&emsp;&emsp;└─/URL_structure&emsp;<a href="/administration/URL_structure">Test</a><br>
+	</font>
+</body>
+</html>

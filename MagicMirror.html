@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MagicMirror V1.0</title>
+	<style>
+	.div_main{ position:absolute; left:0px; top:0px; background: rgba(255, 255, 255, 0); width: 100%; height: 100% } 
+	.div_weather{ float:left;width:49%;border:1px solid #000000 }
+	.div_time{ float:right;width:49%;border:1px solid #000000 }
+	.div_curriculum{ float:right;width:49%;border:1px solid #000000 }
+	.div_message{ position:absolute; left:0px; top:0px; width: 100%; height: 0px }
+	.div_music{ position:absolute; left:0px; top:0px; background: rgba(255, 255, 255, 0); width: 100%; height: 0px }
+	.div_weather_detail{ position:absolute; left:0px; top:0px; background: rgba(255, 255, 255, 0); width: 0%; height: 100% }
+	.div_calendar{ position:absolute; right:0px; top:0px; background: rgba(255, 255, 255, 0); width: 0%; height: 100% }
+	.div_clock{ position:absolute; left:0px; bottom:0px; background: rgba(255, 255, 255, 0); width: 100%; height: 0% }
+	.div_alarm_clock_ring{ position:absolute; left:0px; bottom:0px; background: rgba(255, 255, 255, 0); width: 100%; height: 0% }
+	.div_lyric_display{ text-align: center; height: 80%; width:100%; overflow: hidden }
+	</style>
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./js/time.js"></script>
+	<script type="text/javascript" src="./js/weather.js"></script>
+	<script type="text/javascript" src="./js/curriculum.js"></script>
+	<script type="text/javascript" src="./js/message.js"></script>
+	<script type="text/javascript" src="./js/music.js"></script>
+	<script type="text/javascript" src="./js/weather_detail.js"></script>
+	<script type="text/javascript" src="./js/calendar.js"></script>
+	<script type="text/javascript" src="./js/clock.js"></script>
+	<script type="text/javascript" src="./js/control.js"></script>
+	<link rel="shortcut icon" href="./icon/favicon.ico">
+</head>
+<body style="font-family: Roboto,Noto Sans CJK Thin; font-weight: 100; background: #000000">
+	<div class="div_main" id="main_screen">
+		<div class="div_weather" id="weather"> </div>
+		<div class="div_time" id="time"> </div>
+		<div class="div_curriculum" id="curriculum"> </div>
+		<div class="div_message" id="message"></div>
+	</div>
+	<div class="div_music" id="music">
+		<div id="music_display"></div>
+		<div class="div_lyric_display" id="lyric_display">
+			<div id="lyric_display_inner"></div>
+		</div>
+	</div>
+	<div class="div_weather_detail" id="weather_detail"></div>
+	<div class="div_calendar" id="calendar"></div>
+	<div class="div_clock" id="clock"></div>
+	<div class="div_alarm_clock_ring" id="alarm_clock_ring"></div>
+	<audio id="music_player"></audio>
+	<audio id="ringtone" src="./ringtone/Aurora.mp3" loop></audio>
+</body>
+</html>
