@@ -99,7 +99,7 @@ function Calendar_Spread()
 				alpha[0][i]=k/40;
 			}
 			var text=
-				"<div><br><br><br><br><br><br>"+
+				"<div id='calendar_inner'><br><br><br><br><br><br>"+
 				"<p align='center'>"+
 				"<font style='color:rgba(255,255,255,"+alpha[0][0]*8+") ;font-size: 40px ;font-weight: 100'>"+
 				year+"年"+month+"月"+
@@ -181,7 +181,7 @@ function Calendar_Spread()
 				color[0][i]=k/10;
 			}
 			var text=
-				"<div><br><br><br><br><br><br>"+
+				"<div id='calendar_inner'><br><br><br><br><br><br>"+
 				"<p align='center'>"+
 				"<font style='color: #FFFFFF ;font-size: 40px ;font-weight: 100'>"+
 				year+"年"+month+"月"+
@@ -273,7 +273,7 @@ function Calendar_Spread()
 						else
 							color[i][j-1]=k/beta;
 					var text=
-						"<div><br><br><br><br><br><br>"+
+						"<div id='calendar_inner'><br><br><br><br><br><br>"+
 						"<p align='center'>"+
 						"<font style='color: #FFFFFF ;font-size: 40px ;font-weight: 100'>"+
 						year+"年"+month+"月"+
@@ -355,7 +355,7 @@ function Calendar_Spread()
 				beta=30;
 			color[6][6]=k/beta;
 			var text=
-				"<div><br><br><br><br><br><br>"+
+				"<div id='calendar_inner'><br><br><br><br><br><br>"+
 				"<p align='center'>"+
 				"<font style='color: #FFFFFF ;font-size: 40px ;font-weight: 100'>"+
 				year+"年"+month+"月"+
